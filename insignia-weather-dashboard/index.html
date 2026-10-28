@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌤️ Insignia Weather Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .weather-card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .temp {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 0.5rem 0;
+    }
+    .description {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+    }
+    .details {
+      font-size: 0.9rem;
+      color: #b0b0b0;
+      margin-top: 0.5rem;
+    }
+    .alert {
+      background: #ff3333;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-weight: bold;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌤️ Insignia Weather Dashboard</h1>
+    <div class="weather-card">
+      <div class="temp" id="temperature">Loading...</div>
+      <div class="description" id="description">Loading...</div>
+      <div class="details" id="details">Loading...</div>
+    </div>
+    <div class="alert" id="alert" style="display: none;">⚠️ Weather alert: Thunderstorm expected in the next 30 minutes.</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
